@@ -32,12 +32,21 @@ public class Singleton  {
 在需要使用該功能的class的使用方法如下:
 
 Singleton mSingleton;
+
 mSingleton = Singleton.getInstance();
+
 mSingleton.func("放入判斷值", new Singleton.SingletonListener() {
+
     @Override
+    
     public void onSuccess(String success) {
+    
     }
+    
     @Override
+    
     public void onError(String error) {
+    
     }
+    
 });
