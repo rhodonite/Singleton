@@ -1,5 +1,5 @@
 # Singleton-
-
+```
 public class Singleton  {
 
     private static Singleton INSTANCE = null;
@@ -28,9 +28,9 @@ public class Singleton  {
             listener.onError("error");
     }
 }
-
+```
 在需要使用該功能的class的使用方法如下:
-
+```
 Singleton mSingleton;
 
 mSingleton = Singleton.getInstance();
@@ -50,3 +50,4 @@ mSingleton.func("放入判斷值", new Singleton.SingletonListener() {
     }
     
 });
+```
