@@ -1,4 +1,4 @@
-# Singleton-
+# Singleton 用法
 ```
 public class Singleton  {
 
