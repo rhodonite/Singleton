@@ -31,7 +31,8 @@ public class Singleton  {
 ```
 Singleton mSingleton;
 mSingleton = Singleton.getInstance();
-mSingleton.func("放入判斷值", new Singleton.SingletonListener() {
+boolean mCheck = true;
+mSingleton.func(mCheck, new Singleton.SingletonListener() {
 
     @Override   
     public void onSuccess(String success) {    
