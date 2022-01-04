@@ -3,9 +3,8 @@
 public class Singleton  {
 
     private static Singleton INSTANCE = null;
-    
     private Singleton() {};
- 
+    
     public static Singleton getInstance() {
         if (INSTANCE == null) {
             INSTANCE = new Singleton();
@@ -20,8 +19,7 @@ public class Singleton  {
         void onError(String error);
     }
     
-    public void func(boolean mCheck, SingletonListener listener){
-          
+    public void func(boolean mCheck, SingletonListener listener){         
         if(mCheck)
             listener.onSuccess("success");
         else
@@ -32,22 +30,15 @@ public class Singleton  {
 在需要使用該功能的class的使用方法如下:
 ```
 Singleton mSingleton;
-
 mSingleton = Singleton.getInstance();
-
 mSingleton.func("放入判斷值", new Singleton.SingletonListener() {
 
-    @Override
+    @Override   
+    public void onSuccess(String success) {    
+    }    
     
-    public void onSuccess(String success) {
-    
-    }
-    
-    @Override
-    
-    public void onError(String error) {
-    
-    }
-    
+    @Override    
+    public void onError(String error) {    
+    }    
 });
 ```
